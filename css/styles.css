@@ -1,0 +1,127 @@
+/**
+ * Базовые стили для всего сайта
+ */
+
+
+body {
+	position: relative;
+	font-family: 'Noto Sans', sans-serif;
+	font-size: 16px;
+	line-height: 1.4;
+	color: #000;
+	min-width: 320px;
+	overflow-x: hidden;
+	height: auto;
+
+	font-family: sans-serif;
+}
+
+
+/**
+ * Другие стили
+ */
+.navbar {
+	width: 100%;
+	height: 70px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, .1);
+}
+
+.navbar .container {
+	height: inherit;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.navbar-menu {
+	list-style-type: none;
+	padding-Left: 0;
+	margin-bottom: 0;
+}
+
+.navbar-menu li {
+	display: inline-block;
+}
+
+.navbar-menu li a {
+	display: inline-block;
+	color:black;
+	opacity: 0.6;
+	text-decoration: none;
+	padding: 10px;
+	transition: all .07s ease-in-out;
+}
+
+.navbar-menu li a:hover {
+	opacity: 1;
+}
+
+
+
+.navbar-wrap {
+	display: flex;
+	flex-flow: row nowrap;
+}
+
+
+.navbar-brand {
+	font-weight: 700;
+	font-size: 26px;
+	text-decoration:overline;
+}
+
+.navbar-brand:hover {
+	color: coral;
+}
+
+.navbest {
+	
+}
+
+.frame {
+	width: 500px;
+	height: 250px;
+	margin: auto;
+	position: relative;
+	border-radius: 0.125;
+	
+	background-size: 200%;
+	background-color: inherit;
+}
+
+.frame::after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: -0.125em;
+	left: -0.125em;
+	z-index: -1;
+	width: calc(100% + 0.25em);
+	height: calc(100% + 0.25em);
+	background-image: linear-gradient(45deg,#f79533, #f37055, 
+	#ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+	background-size: 200%;
+
+	border-radius: 0.25em;
+
+	animation: animatebg 3s ease
+	infinite paused;
+}
+
+
+
+.frame:hover::after {
+	animation-play-state: running;
+}
+
+@keyframes animatebg {
+	0% {
+		background-position: 0;
+	}
+	50% {
+		background-position: 100%;
+	}
+	100% {
+		background-position: 0;
+	}
+}
